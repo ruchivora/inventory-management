@@ -1,9 +1,14 @@
 .editModal {
+  position: fixed;
   width: 300px;
-  border: 1px solid black;
-  position: relative;
-  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(40,43,39);
   padding: 20px;
+  z-index: 1100; /* slightly higher than the backdrop */
+  border-radius: 8px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
 }
 .editHeader {
   display: flex;
@@ -14,7 +19,8 @@
 }
 .closeButton {
   font-size: 20px;
-  color: rgb(157,173,81)
+  color: rgb(157,173,81);
+  cursor: pointer;
 }
 .productName {
   font-size: 15px;

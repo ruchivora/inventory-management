@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
-import { DataContext } from '../../dataContext';
+import { DataContext } from '../../store/context';
 import { useContext, useState } from 'react';
 import classNames from 'classnames';
 import styles from './TableRow.module.css'; 
 import EditRow from '../EditRow/EditRow';
-
+import { MdEdit, MdDelete } from "react-icons/md";
+import { FaEye } from "react-icons/fa";
 
 export default function TableRow(inventoryItem) {
-  let {name, category, isDisabled, value, quantity, price, id} = inventoryItem;
-  let {isAdmin} = useContext(DataContext);
+  const {name, category, isDisabled, value, quantity, price, id} = inventoryItem;
   let [isEditMode, setIsEditMode] = useState(false);
   let [itemToEdit, setItemToEdit] = useState(null);
-  const {deleteInventoryItem, toggleIsDisabledStatus} = useContext(DataContext);
+  const {deleteInventoryItem, toggleIsDisabledStatus, isAdmin} = useContext(DataContext);
 
   const activeState = classNames({
     [styles.disabled]: (!isAdmin || (isAdmin && isDisabled)),  
@@ -39,15 +39,21 @@ export default function TableRow(inventoryItem) {
           <button
             disabled={!isAdmin || isDisabled}
             className={styles.editButton}
-            onClick={() => handleEditClick(inventoryItem)}>Edit</button>
+            onClick={() => handleEditClick(inventoryItem)}>
+            <MdEdit color={!isAdmin || (isAdmin && isDisabled) ? "gray" : "green"} />
+          </button>
           <button
             disabled={!isAdmin}
             className={styles.disableButton}
-            onClick={() => {toggleIsDisabledStatus(id)}}>Disable</button>
+            onClick={() => {toggleIsDisabledStatus(id)}}>
+            <FaEye color={!isAdmin || (isAdmin && isDisabled) ? "gray" : "plum"} />
+          </button>
           <button
             disabled={!isAdmin}
             className={styles.deleteButton}
-            onClick={() => {deleteInventoryItem(id)}}>Delete</button>
+            onClick={() => {deleteInventoryItem(id)}}>
+            <MdDelete color={!isAdmin ? "gray" : "red"}/>
+          </button>
         </div>
       </div>
       
@@ -55,7 +61,6 @@ export default function TableRow(inventoryItem) {
         item={itemToEdit}
         closeEditModal={closeEditModal}></EditRow>)}
     </>
-    
   )
 }
 

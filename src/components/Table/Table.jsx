@@ -1,12 +1,17 @@
-import { useInventoryData } from "../../customHooks";
+import { useContext } from "react";
 import TableRow from "../TableRow/TableRow";
 import styles from "./Table.module.css";
+import { DataContext } from "../../store/context.jsx";
 
 const tableHeader = ["Name", "Category", "Price", "Quantity", "Value", "Action"]
 
 export default function Table() {
 
-  let {inventoryList} = useInventoryData();
+  const {inventoryList} = useContext(DataContext);
+
+  if (!inventoryList || inventoryList.length === 0) {
+    return <div className={styles.loadingState}>Loading...</div>;
+  }
 
   return (
     <>
@@ -21,16 +26,13 @@ export default function Table() {
           ))}
         </div>
 
-        {inventoryList.map((inventoryItem, index) => {
+        {inventoryList?.map((inventoryItem, index) => {
           return <TableRow
+            {...inventoryItem}
             key={index} 
-          {...inventoryItem}></TableRow>
+          />
         })}
       </div>
-      
-      
     </>
-    
-    
   )
 }

@@ -1,3 +1,5 @@
+/* Mocked Data */
+
 export const inventoryData = [
   {
     "name": "Bluetooth",

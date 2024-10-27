@@ -2,12 +2,11 @@ import './App.css'
 import CardList from './components/CardList/CardList';
 import Table from './components/Table/Table.jsx';
 import { useContext } from 'react';
-import { DataContext } from './dataContext';
+import { DataContext } from './store/context.jsx';
 
 function App() {
 
-  const {isAdmin, updateViewType} = useContext(DataContext);
-  // console.log("from app component", tempList)
+  let {isAdmin, updateViewType} = useContext(DataContext);
 
   return (
     <>

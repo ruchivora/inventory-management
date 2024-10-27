@@ -1,0 +1,9 @@
+export const SET_INVENTORY = 'SET_INVENTORY';
+
+export const DELETE_ITEM = 'DELETE_ITEM';
+
+export const UPDATE_ITEM = 'UPDATE_ITEM';
+
+export const TOGGLE_DISABLED_STATUS = 'TOGGLE_DISABLED_STATUS';
+
+export const SET_VIEW_TYPE = 'SET_VIEW_TYPE';

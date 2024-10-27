@@ -1,13 +1,13 @@
 import { useContext, useState } from 'react';
 import styles from './EditRow.module.css';
-import { DataContext } from '../../dataContext';
 import InputField from '../InputField/InputField';
 import PropTypes from 'prop-types';
+import { DataContext } from '../../store/context.jsx';
 
 export default function EditRow({closeEditModal, item}) {
 
   let [inventoryItem, setInventoryItem] = useState(formatItemData(item));
-  let {updateInventoryItem} = useContext(DataContext);
+  const {updateInventoryItem} = useContext(DataContext);
 
   function formatItemData(item) {
     return {
@@ -21,8 +21,7 @@ export default function EditRow({closeEditModal, item}) {
     setInventoryItem(prevItem => ({
       ...prevItem,
       [key]: event.target.value, 
-    }));
-    
+    })); 
   }
 
   function handleOnSave(inventoryItem) {
@@ -41,7 +40,9 @@ export default function EditRow({closeEditModal, item}) {
 
         <div className={styles.editHeader}>
           <span className={styles.editHeaderText}>Edit product</span>
-          <span className={styles.closeButton}>X</span>
+          <span 
+            className={styles.closeButton} 
+            onClick={() => closeEditModal()}>X</span>
         </div>
 
         <div className={styles.productName}>{inventoryItem.name}</div>
@@ -70,7 +71,6 @@ export default function EditRow({closeEditModal, item}) {
             value={inventoryItem.value}
             onChange={handleInputChange}
             keyName="value" />
-          
         </div>
 
         <div className={styles.buttonGroup}>
