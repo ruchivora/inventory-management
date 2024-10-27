@@ -1,0 +1,22 @@
+.table {
+  background-color: rgb(33,33,36);
+  border-radius: 10px;
+  overflow: hidden; 
+}
+.tableHeader {
+  display: flex;
+  background-color: rgb(33,33,36);
+  padding: 20px;
+  border-bottom: 0.1px solid rgb(157,173,81);
+  
+}
+.tableHeaderCell {
+  flex: 1;
+  
+}
+.tableHeaderText {
+  background-color: rgb(22,23,24);
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(157,173,81)
+}

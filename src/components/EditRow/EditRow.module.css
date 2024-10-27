@@ -1,0 +1,29 @@
+.editModal {
+  width: 300px;
+  border: 1px solid black;
+  position: relative;
+  margin: auto;
+  padding: 20px;
+}
+.editHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.editHeaderText {
+  font-size: 20px;
+}
+.closeButton {
+  font-size: 20px;
+  color: rgb(157,173,81)
+}
+.productName {
+  font-size: 15px;
+}
+.buttonGroup {
+  display: flex;
+  justify-content: flex-end;
+}
+.cancelButton, .saveButton{
+  margin:5px;
+  padding: 5px
+}

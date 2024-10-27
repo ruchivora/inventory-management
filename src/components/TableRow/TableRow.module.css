@@ -1,0 +1,43 @@
+.disabled {
+  color: rgb(128, 128, 128);
+}
+
+.enabled {
+  color:  rgb(255, 255, 255);
+}
+
+.tableRow {
+  display: flex;
+  padding: 20px;
+  border-bottom: 0.1px solid rgb(157, 173, 81);
+}
+.tableRowCell {
+  flex: 1;
+}
+.rowActions {
+  display: flex;
+}
+.editButton, .disableButton, .deleteButton {
+  margin: 0px 5px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: white;
+  border: none
+}
+.deleteButton {
+  color: rgb(255, 0, 0);
+}
+.editButton {
+  color: rgb(0, 128, 0)
+}
+.editButton:disabled, .disableButton:disabled, .deleteButton:disabled  {
+  cursor: not-allowed;
+  background-color: rgb(128, 128, 128);
+}
+.disableButton {
+  color: rgb(233, 93, 233)
+}
+
+.disableRow {
+  color: rgb(128, 128, 128);
+}

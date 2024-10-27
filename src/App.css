@@ -1,0 +1,31 @@
+* {
+  font-family: math;
+  margin:0
+}
+
+body {
+  background-color: rgb(22,23,24);
+  color: white;
+  padding: 15px 40px;
+}
+
+.viewToggle {
+  display: flex;
+  justify-content: end;
+}
+.viewToggleBtn {
+  color: black;
+  margin: 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: rgb(201, 183, 183);
+}
+.active {
+  background-color: rgb(36,51,37);
+  font-size: larger;
+  color:rgb(255, 255, 255);
+}
+button { 
+  cursor: pointer;
+}
+
