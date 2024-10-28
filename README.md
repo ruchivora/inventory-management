@@ -2,6 +2,8 @@
 
 A simple inventory management web application where users can view products, and admins have additional functionality to manage product details. This app provides two views – an **Admin view** and a **User view** – which can be toggled using the buttons in the navigation bar.
 
+**The code is deployed on** : https://lucidity-inventory-management-system.netlify.app/
+
 ## Features
  - ### General
   - View a list of all available products in the inventory.
@@ -21,8 +23,8 @@ A simple inventory management web application where users can view products, and
   - **User Restrictions:** Users can only view product information. All action buttons will be disabled in User view.
   
 ### Tech Stack
-  **Frontend:** React, CSS
-  **Data Store:** Local Storage, React Context API for data flow
+  - **Frontend:** React, CSS
+  - **Data Store:** Local Storage, React Context API for data flow
 
 ### Installation
 - Clone the project
