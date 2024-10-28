@@ -17,7 +17,8 @@ A simple inventory management web application where users can view products, and
   - In the User view, you can:
   - **View Products:** Access the list of products in a read-only format.
   - All action buttons (edit, delete, disable) are disabled in this view.
-   ### How to Use
+  
+### How to Use
   - **Admin and User Views:** Switch between Admin and User views by toggling the switch button in the navigation bar.
   - **Inventory Actions (Admin only):** Edit, delete, and disable buttons are available for managing products when in Admin view.
   - **User Restrictions:** Users can only view product information. All action buttons will be disabled in User view.
