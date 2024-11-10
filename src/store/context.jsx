@@ -66,6 +66,7 @@ export const DataProvider = ({ children }) => {
   };
   
   const updateViewType = (viewType) => {
+    console.log('viewType', viewType)
     dispatch({ type: SET_VIEW_TYPE, payload: viewType });
   };
 
