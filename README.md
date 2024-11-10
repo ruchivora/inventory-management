@@ -2,7 +2,7 @@
 
 A simple inventory management web application where users can view products, and admins have additional functionality to manage product details. This app provides two views – an **Admin view** and a **User view** – which can be toggled using the buttons in the navigation bar.
 
-**The code is deployed on** : https://lucidity-inventory-management-system.netlify.app/
+**The code is deployed on** : https://lnventory-management-system.netlify.app/
 
 **Video explaining the web app features:** https://www.loom.com/share/c145a17f9f7848f3b1797b5ceeae42be?sid=4553458b-0b82-4d54-bd1c-89c17e9e53e6
 
